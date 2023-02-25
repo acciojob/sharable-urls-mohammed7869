@@ -1,25 +1,16 @@
 // your code here
-var url = document.getElementById("url").textContent;
-
-function sharableURL() {
-	var nameElement = document.getElementById("name").value;
-	var yearElement = document.getElementById("year").value;
-	if(nameElement&&yearElement){
-		url="https://localhost:8080/?name="+nameElement+"&year="+yearElement;
-		document.getElementById("url").textContent = url;
+function buttonClick() {
+	let name=document.getElementById("name").value
+    let year=document.getElementById("year").value
+	let url=document.getElementById("url")
+	
+	if (name!="" && year!="") {
+		url.innerText="https://localhost:8080/?name="+`${name}&year=${year}`
 	}
-	else if(nameElement&&!yearElement){
-		url="https://localhost:8080/?name="+nameElement;
-		document.getElementById("url").textContent = url;
+    else if(name!=""){
+		url.innerText="https://localhost:8080/?name="+`${name}`
 	}
-	else if(yearElement&&!nameElement){
-		url="https://localhost:8080/?year="+yearElement;
-		document.getElementById("url").textContent = url;
-	}
-	else{
-		url="https://localhost:8080/";
-		document.getElementById("url").textContent = url;
+    else if(year!=""){
+		url.innerText="https://localhost:8080/?year="+`${year}`
 	}
 }
-
-document.getElementById("submit").addEventListener("click",sharableURL);

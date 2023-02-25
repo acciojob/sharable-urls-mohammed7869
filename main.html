@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html>
   <body>
+    <script type="text/javascript" src="./script.js"></script>
 	  <h3 id="url">https://localhost:8080/</h3>
-	  <p><label>Name:</label></p>
-	  <p><input type="text" id="name" name="name"></p>
-	  <p><label>Graduation Year: </label></p>
-	  <p><input type="number" id="year" name="year"></p>
-	  <p></p>
-	  <p><button type="submit" id="submit">Submit</button></p>
-    <script type="text/javascript" src="./script.js">
-</script>
+	  <div>
+		  <label for="name">Name:</label><br>
+		  <input id="name" name="name" type="text"><br>
+		  <label for="year">Graduation year:</label><br>
+		  <input id="year" name="year" type="number"><br><br>
+		  <button id="button" type="button" onclick="buttonClick()">Submit</button>
+	  </div>
   </body>
-
 </html>
